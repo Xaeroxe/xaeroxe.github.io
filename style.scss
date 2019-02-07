@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  background: #222;
+  font: 18px/1.4 Helvetica, Arial, sans-serif;
+  color: #eee;
 }
 
 .container {
@@ -31,24 +31,24 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-
-  @include mobile {
+}
+@media screen and (max-width: 640px) {
+  h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
 
 h1 {
   font-size: 30px;
-  a {
-    color: inherit;
-  }
+}
+h1 a {
+  color: inherit;
 }
 
 h2 {
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: #fff;
 }
 
 p {
@@ -69,12 +69,12 @@ p {
 }
 
 a {
-  color: $blue;
+  color: #4183C4;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
+  cursor: pointer;
+}
+a:hover, a:active {
+  color: #4183C4;
 }
 
 ul, ol {
@@ -110,55 +110,48 @@ img {
   max-width: 100%;
 }
 
-// Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
 }
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: #fff;
 }
 
-// Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
+  color: #fff;
+  background: #eee;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
+::selection {
+  color: #fff;
+  background: #eee;
+}
+
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-//
-// .masthead
-//
-
 .wrapper-masthead {
   margin-bottom: 50px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
+  border-bottom: 1px solid #eee;
+}
+@media screen and (max-width: 640px) {
+  .masthead {
     text-align: center;
   }
 }
@@ -168,22 +161,23 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
-
-  @include mobile {
+}
+@media screen and (max-width: 640px) {
+  .site-avatar {
     float: none;
     display: block;
     margin: 0 auto;
   }
-
-  img {
-    border-radius: 5px;
-  }
+}
+.site-avatar img {
+  border-radius: 5px;
 }
 
 .site-info {
   float: left;
-
-  @include mobile {
+}
+@media screen and (max-width: 640px) {
+  .site-info {
     float: none;
     display: block;
     margin: 0 auto;
@@ -192,9 +186,9 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #fff;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -202,48 +196,46 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: #ccc;
   font-size: 16px;
-
-  @include mobile {
+}
+@media screen and (max-width: 640px) {
+  .site-description {
     margin: 3px 0;
   }
 }
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  margin-top: 23px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-
-  @include mobile {
+}
+@media screen and (max-width: 640px) {
+  nav {
     float: none;
     margin-top: 9px;
     display: block;
     font-size: 16px;
   }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
-    }
+}
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-align: right;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 640px) {
+  nav a {
+    margin: 0 10px;
+    color: #4183C4;
   }
 }
 
-//
-// .main
-//
-
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #eee;
 }
 
 .posts > .post:last-child {
@@ -251,31 +243,27 @@ nav {
   border-bottom: none;
 }
 
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+.post blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid #000;
+  padding: 0.1em 1em;
+  color: #666;
+  font-size: 22px;
+  font-style: italic;
+}
+.post .comments {
+  margin-top: 10px;
+}
+.post .read-more {
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  background-color: #444;
 }
 
 footer {
