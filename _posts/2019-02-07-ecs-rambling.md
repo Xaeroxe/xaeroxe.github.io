@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ECS ramblings
+excerpt_separator: <!--end_excerpt-->
 ---
 
 # Introduction
@@ -21,6 +22,8 @@ that have manifested for Amethyst in unfortunate ways which inspired two spin of
 - `igneous` My proposal for a fork of `specs` that can be used to solve problems with it. Doesn't actually exist beyond a few drafts and proposals.
 
 [@torkleyy]: https://github.com/torkleyy
+
+<!--end_excerpt-->
 
 # Unifying new development work
 
