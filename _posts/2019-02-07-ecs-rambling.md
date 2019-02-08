@@ -28,7 +28,7 @@ When I first wrote the igneous proposal I hadn't spoken with torkleyy as much as
 creation of this blog I can get better at sharing my ideas. So I'll start with my perspective of what's happened since the igneous post.
 
 Torkleyy reached out to me to express interest in unifying our efforts. Nitric has some interesting ideas and enhancements that igneous
-didn't, but some of those ideas and enhancements have made integrating some igneous features more difficult. So we're working towards 
+didn't, but some of those ideas and enhancements have made integrating some igneous features more difficult. So we're working towards
 solutions that express the best of both worlds as best we can.
 
 There's a lot of nuance and smaller ideas that I'm not quite as interested in covering here especially because I consider them unproblematic.
@@ -95,8 +95,8 @@ Oh hey! The keys are now adjacent to the types. That's neat. This approach has p
 
 ### Just cut the keys
 
-While this was the first thing that came to mind I kind of hate it. There's utility in being able to register multiple components of the
-same type, and if we're designing from the ground up I'd like to cut this limitation of specs.
+This is another option we're considering. there is some utility in the [newtype](https://github.com/rust-unofficial/patterns/blob/master/patterns/newtype.md)
+design pattern. and it would drastically simplify the implementation.
 
 ## Resource and data dependencies aka Resource/System initialization
 
@@ -113,6 +113,4 @@ I think both torkleyy and I lack concrete plans for this as of right now, but we
 
 ## What's the name?
 
-Good question, I like `igneous` personally but for now we're still using `nitric`. I tried to raise the topic with @torkleyy but
-I didn't get a response on that statement.
-
+We've decided to go with `nitric` since it's the older name.
