@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ECS ramblings
+excerpt_separator: <!--end_excerpt-->
 ---
 
 # Introduction
@@ -11,7 +12,7 @@ going over the history of the project and how we got to where we are today.
 A small summary and some reminders is in order though.
 
 For those who aren't familiar
-[I have opinions on how an ECS should be implemented for Amethyst.](https://community.amethyst-engine.org/t/igneous-a-path-to-a-usable-engine/422/).
+[I have opinions on how an ECS should be implemented for Amethyst](https://community.amethyst-engine.org/t/igneous-a-path-to-a-usable-engine/422/).
 
 We have three names flying around for our ECS project so I'll provide a quick summary of them here.
 
@@ -21,6 +22,8 @@ that have manifested for Amethyst in unfortunate ways which inspired two spin of
 - `igneous` My proposal for a fork of `specs` that can be used to solve problems with it. Doesn't actually exist beyond a few drafts and proposals.
 
 [@torkleyy]: https://github.com/torkleyy
+
+<!--end_excerpt-->
 
 # Unifying new development work
 
@@ -41,11 +44,11 @@ in that components with generics are very important, but also incomplete types. 
 generics are filled, but I haven't yet figured out how to submit the type to the inventory only when the component type is complete.
 I'll keep pondering this, and if any readers have ideas about how this can be done and can make a proof of concept please let me know.
 
-## Macros to generate `System`s using simpler syntax
+## Macros to generate `Systems` using simpler syntax
 
 This is at the top of my priority list, but has been difficult to implement due to...
 
-## Support for registering multiple components and resources of the same type with alternate "keys"
+## Support for registering multiple components and resources of the same type with alternate keys
 
 Making this work with macros to generate systems has been difficult, mainly because my existing proposals have been highly
 focused around only needing a type.
