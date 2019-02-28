@@ -7,6 +7,9 @@ Rewrites. Ugh what a gross word in software development. Believe me, I know all 
 nine years, and I've spent most of it rewriting things because I'm a perfectionist. This post is about how you can avoid the
 problems I've had, and when a rewrite might actually be the right thing to do.
 
+EDIT (2019-02-28 11:22 UTC): I've received some confusion about what constitutes a rewrite, so for the purposes of this article
+I'm defining rewrite as "any operation that halts bug fixes and enhancements for an excessively long duration."
+
 # What causes rewrites?
 
 I've identified a few main causes of software rewrites.
