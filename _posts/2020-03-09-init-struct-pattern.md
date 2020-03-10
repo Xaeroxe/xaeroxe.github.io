@@ -69,11 +69,11 @@ anything. They also prefix every field with its name, which makes the code more 
 
 ```rust
 pub struct YakShaverBuilder {
-    pub clipper_size: u32,
-    pub gas_powered_clippers: bool,
-    pub solar_powered_clippers: bool,
-    pub color_to_dye_yak: String,
-    pub clipper_color: String,
+    clipper_size: u32,
+    gas_powered_clippers: bool,
+    solar_powered_clippers: bool,
+    color_to_dye_yak: String,
+    clipper_color: String,
 }
 
 impl YakShaverBuilder {
