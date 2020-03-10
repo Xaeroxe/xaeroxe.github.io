@@ -68,8 +68,7 @@ Builders are neat because they don't require us to specify *everything* to build
 anything. They also prefix every field with its name, which makes the code more readable. For example
 
 ```rust
-#[non_exhaustive]
-pub struct YakShaverInit {
+pub struct YakShaverBuilder {
     pub clipper_size: u32,
     pub gas_powered_clippers: bool,
     pub solar_powered_clippers: bool,
