@@ -157,6 +157,7 @@ impl Default for YakShaverInit {
             solar_powered_clippers: true,
             color_to_dye_yak: String::from("brown"),
             clipper_color: String::from("black"),
+            __non_exhaustive: (),
         }
     }
 }
@@ -177,7 +178,7 @@ let yak_shaver = YakShaverInit {
     clipper_size: 4,
     color_to_dye_yak: String::from("hot pink"),
     clipper_color: String::from("red"),
-    ..Default::default(),
+    ..Default::default()
 }.init();
 ```
 
